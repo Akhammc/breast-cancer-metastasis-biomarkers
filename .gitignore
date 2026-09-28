@@ -1,0 +1,24 @@
+﻿# R and RStudio
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local operating-system files
+Thumbs.db
+.DS_Store
+
+# Local credentials and environment files
+.env
+.env.*
+
+# Large or locally generated analysis artifacts
+data/raw/*
+data/processed/*
+results/*
