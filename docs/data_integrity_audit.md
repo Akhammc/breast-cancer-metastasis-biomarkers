@@ -86,8 +86,8 @@ The GEO record includes author-provided differential-expression files. These are
 
 - No differential-expression analysis has been performed.
 - No statistical design has been frozen.
-- The patient, not the library, is the biological unit of inference.
-- The small number of matched patients and uncertain tumor content substantially limit inferential power.
+- For biological interpretation, the patient is the relevant biological unit; repeated libraries from the same recorded specimen must not be treated as independent biological observations. No inferential analysis is authorized under the current scope.
+- The small number of matched patients and uncertain tumor content constrain the descriptive comparisons and limit the generalizability of observed expression patterns.
 - Any subsequent expression analysis must be described as exploratory unless the verified sample structure supports stronger inference.
 - No causal, clinical biomarker, or clinical validation claims are supported by this audit alone.
 

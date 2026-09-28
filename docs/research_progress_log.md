@@ -77,26 +77,26 @@ Status: COMPLETED
 
 ## Day 3 — Statistical feasibility and analysis design
 
-Date: Pending
-Status: NOT STARTED
+Date: 2026-09-29
+Status: IN PROGRESS
 
-### Entry criteria
+### Original entry criteria (not independently verified)
 
 - Days 1 and 2 documentation reviewed and committed.
-- Working tree verified clean before beginning new work.
+- A clean working tree was intended before beginning new work; the pre-work state was not independently confirmed.
 
-### Planned work
+### Initial plan (retained for traceability; see findings below)
 
 1. Summarize library counts and distinct specimen counts by patient and tissue.
 2. Assess the number of independent patients available for each proposed comparison.
 3. Evaluate whether patient pairing, repeated specimens, and replicate structure can be represented defensibly.
 4. Assess clinical eligibility, tumor content, and potential confounding.
 5. Document the feasibility and limitations of each comparison.
-6. Obtain approval of the analysis design before running differential expression.
+6. Maintain the user-approved descriptive scope (D007); differential-expression design and testing are outside the current scope.
 
 No differential-expression analysis or statistical model is authorized by this progress entry.
 
-## Overall project status at close of Day 2
+## Historical project status at close of Day 2
 
 Data integrity and specimen-to-clinical matching: VERIFIED.
 
@@ -108,4 +108,46 @@ Statistical design: NOT FROZEN.
 
 Differential-expression analysis: NOT STARTED.
 
-The project proceeds as an exploratory gene-expression and candidate-prioritization study, subject to statistical feasibility and transparent reporting of limitations.
+The project proceeds as a descriptive, exploratory feasibility study of tissue-associated gene-expression patterns and data limitations, subject to transparent reporting of limitations.
+
+### Day 3 feasibility findings — 2026-09-29
+
+Status: IN PROGRESS
+
+#### Patient-level eligibility
+
+| Comparison | All matched patients | Tumor documented at both sites |
+|---|---:|---:|
+| Breast–liver | 3 | 1 |
+| Breast–lung | 2 | 1 |
+| Liver–lung | 6 | 1 |
+
+- Patient 3 is the only patient with documented tumor content at all three tissue sites.
+- Unknown tumor content does not establish absence of tumor.
+- The strict documented-tumor scenario is a sensitivity description, not an approved specimen exclusion rule.
+
+#### Scope decision
+
+- Decision D007: Proceed with a descriptive, exploratory feasibility project.
+- Describe tissue-associated expression patterns and data limitations.
+- Differential-expression testing is not authorized under the selected scope.
+- No causal, clinical biomarker, or population-level inference is planned.
+- The small matched cohort, incomplete tumor-content information, and unresolved library independence constrain interpretation.
+
+#### Remaining work
+
+1. Complete and review the feasibility report.
+2. Assess and document whether descriptive expression summaries can be generated defensibly.
+3. Review the analysis matrix and replicate structure before any expression summaries.
+4. Keep differential-expression testing out of scope unless the user explicitly revises the project decision.
+
+No differential-expression analysis has been performed.
+
+### Feasibility report approval — 2026-09-29
+
+Status: VERIFIED
+
+- The user explicitly approved `docs/statistical_feasibility_report.md` as written.
+- Approval is recorded in decision D008.
+- The descriptive, exploratory scope in D007 remains in effect.
+- Differential-expression testing remains outside the current scope.
