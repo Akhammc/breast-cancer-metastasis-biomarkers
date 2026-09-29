@@ -1,0 +1,9 @@
+"metric","value"
+"Number of libraries",32
+"Number of genes retained",26892
+"Minimum library median logCPM",2.43692481956261
+"Median library median logCPM",2.75933347488389
+"Maximum library median logCPM",2.98918644780039
+"Minimum gene mean logCPM",-3.29564030128426
+"Median gene mean logCPM",2.64330609652759
+"Maximum gene mean logCPM",13.1098569003167

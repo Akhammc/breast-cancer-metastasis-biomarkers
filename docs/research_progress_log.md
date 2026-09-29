@@ -191,3 +191,41 @@ Reproducible script: `R/day4_exploratory_pca.R`
 - No differential expression testing, tissue-effect inference, causal analysis, or clinical biomarker claims were performed.
 - The PCA separation of R18LIV_1 is not, by itself, evidence of a biological mechanism or grounds for sample exclusion.
 - The selected 500 genes and observed distances depend on the stated filtering, normalization, and feature-selection choices.
+
+## Day 5 — Descriptive gene-expression summaries
+
+### Objective
+
+Generate descriptive gene- and library-level expression summaries using the PE count matrix and the established Day 4 normalization workflow.
+
+### Methods
+
+* Input: `data/raw/GSE316391_counts_PE.csv.gz`.
+* Applied the existing expression filter: CPM > 1 in at least two libraries.
+* Applied edgeR TMM normalization and calculated log2-CPM values using a prior count of 2.
+* Summarized library-level expression distributions and gene-level mean, median, standard deviation, and variance across the 32 libraries.
+* No differential-expression testing, inferential tissue comparisons, causal analysis, or clinical biomarker claims were performed.
+
+### Results and validation
+
+* Libraries processed: 32.
+* Genes retained: 26,892.
+* Gene summary contains 26,892 rows and 26,892 unique Gene IDs.
+* No missing Gene IDs or missing values in the gene- or library-level summaries.
+* Library summary contains 32 rows and 32 unique library IDs.
+* Overall distribution summary contains eight descriptive metrics.
+
+### Outputs
+
+* `results/day5/day5_gene_expression_summary.csv`
+* `results/day5/day5_library_expression_summary.csv`
+* `results/day5/day5_overall_distribution_summary.csv`
+* `results/day5/day5_session_info.txt`
+
+### Interpretation and limitations
+
+These outputs describe expression distributions across the available RNA-seq libraries. Libraries are not independent patients or necessarily independent biological observations. The summaries do not establish tissue-specific differential expression, causal effects, clinical validity, or biomarker performance. Interpretations remain exploratory and subject to the previously documented specimen-level and clinical metadata limitations.
+
+### Status
+
+Day 5 descriptive expression summaries completed and validated. Results have not yet been committed to Git.
