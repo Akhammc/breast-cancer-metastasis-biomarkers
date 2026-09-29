@@ -229,3 +229,37 @@ These outputs describe expression distributions across the available RNA-seq lib
 ### Status
 
 Day 5 descriptive expression summaries completed and validated. Results have not yet been committed to Git.
+
+## Day 6 - Descriptive expression review and annotation checks
+
+### Objective
+
+Review the Day 5 expression summaries, characterize the highest-variance genes, and assess gene-symbol annotation uniqueness without conducting inferential tissue comparisons.
+
+### Methods
+
+* Reviewed gene- and library-level descriptive expression summaries from Day 5.
+* Examined the 20 genes with the highest variance in log2-CPM across 32 libraries.
+* Checked missing and repeated gene symbols in the retained gene summary.
+* Checked whether any of the top 20 variable genes had duplicated gene symbols.
+* Retained Ensembl Gene IDs as primary identifiers; no rows were collapsed or summed by gene symbol.
+
+### Results and validation
+
+* Libraries reviewed: 32.
+* Genes retained: 26,892.
+* Missing gene symbols: 0.
+* Unique non-empty gene symbols: 26,717.
+* Repeated gene symbols beyond the first occurrence: 175.
+* The most frequently repeated symbol was Y_RNA, occurring 21 times.
+* None of the top 20 highest-variance genes had a duplicated gene symbol.
+
+### Interpretation and limitations
+
+The top-variance list describes variability across the available libraries and does not establish tissue-specific expression, metastatic mechanisms, or biomarker validity. Expression variability may reflect biological heterogeneity, tissue composition, technical factors, or other sources of variation that cannot be separated under the current study design.
+
+Repeated gene symbols do not necessarily indicate duplicated count records or errors. Ensembl Gene IDs remain the primary identifiers. No gene-symbol-based aggregation, differential-expression testing, inferential tissue-effect modeling, causal analysis, or clinical biomarker claims were performed.
+
+### Status
+
+Day 6 descriptive review and annotation checks completed. Findings remain exploratory and subject to the previously documented specimen-level and clinical metadata limitations.
