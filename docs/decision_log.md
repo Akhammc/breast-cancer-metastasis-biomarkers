@@ -25,3 +25,17 @@
 - Scope: Descriptive and exploratory gene-expression investigation, as established in D007.
 - Constraints: No differential-expression testing, inferential tissue-effect modeling, causal claims, clinical biomarker claims, or population-level inference under the current scope.
 - Authority: Explicit user approval.
+
+## D009 — Day 4 descriptive exploratory outputs
+
+**Status:** VERIFIED
+
+**Decision:** Generate library-level exploratory PCA and sample-distance visualizations using the approved PE count matrix, TMM-normalized logCPM (prior count 2), CPM > 1 in at least 2 libraries filtering, and the 500 most variable retained genes.
+
+**Rationale:** The outputs support descriptive assessment of expression-profile structure and technical data characteristics while preserving the approved exploratory feasibility scope.
+
+**Implementation:** Centered, unscaled PCA and Euclidean sample distances were calculated across the 32 libraries. Outputs and QC summaries were written to `results/day4/`; the workflow is recorded in `R/day4_exploratory_pca.R`.
+
+**Validation:** All 32 libraries are represented in the PCA coordinates; the 32 × 32 distance matrix is symmetric with a zero diagonal. Both figures were visually reviewed.
+
+**Constraints:** Libraries are not independent biological replicates. No differential expression testing, inferential tissue-effect modeling, causal interpretation, or clinical biomarker claims are authorized by this decision. Any expansion of scope requires a separate explicit decision.

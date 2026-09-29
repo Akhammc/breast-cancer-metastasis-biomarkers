@@ -151,3 +151,43 @@ Status: VERIFIED
 - Approval is recorded in decision D008.
 - The descriptive, exploratory scope in D007 remains in effect.
 - Differential-expression testing remains outside the current scope.
+
+## Day 4 — Descriptive exploratory expression analysis
+
+**Status:** Completed; descriptive outputs generated and validated.
+
+### Scope and preprocessing
+- Used the audited PE count matrix (`GSE316391_counts_PE.csv.gz`) and matched RNA-seq workbook metadata.
+- Retained the 32 RNA-seq libraries representing 16 matched patient-tissue specimens across 7 patients.
+- Applied the approved low-expression filter: CPM > 1 in at least 2 libraries.
+- Applied edgeR TMM normalization and calculated logCPM with prior count 2.
+- Selected the 500 most variable retained genes for visualization.
+- Performed centered, unscaled PCA at library level and calculated Euclidean sample distances using the same transformed expression values.
+
+### Results and technical validation
+- 26,892 genes retained after the CPM filter; 500 selected for visualization.
+- PCA contains 32 unique libraries with no missing PC1 or PC2 coordinates.
+- PC1 explains 31.4% and PC2 explains 20.9% of the variance in the selected-gene PCA.
+- Sample-distance matrix is 32 × 32, symmetric, and has a zero diagonal.
+- Raw library sizes range from 18,854,457 to 29,614,222 counts.
+- TMM effective library sizes range from approximately 10,889,918 to 31,044,063.
+- Both figures were visually reviewed. The PCA has some overlapping labels and shows separation of R18LIV_1; these are descriptive observations only.
+
+### Outputs
+Generated under `results/day4/`:
+- `day4_exploratory_pca.png`
+- `day4_sample_distance.png`
+- `day4_library_metadata.csv`
+- `day4_library_qc_summary.csv`
+- `day4_pca_coordinates.csv`
+- `day4_sample_distance_matrix.csv`
+- `day4_selected_variable_genes.csv`
+
+Reproducible script: `R/day4_exploratory_pca.R`
+
+### Limitations and interpretation
+- PCA and sample distances are exploratory visualizations, not inferential tests.
+- Libraries are not treated as independent biological replicates; 32 libraries map to 16 specimens from 7 patients.
+- No differential expression testing, tissue-effect inference, causal analysis, or clinical biomarker claims were performed.
+- The PCA separation of R18LIV_1 is not, by itself, evidence of a biological mechanism or grounds for sample exclusion.
+- The selected 500 genes and observed distances depend on the stated filtering, normalization, and feature-selection choices.
