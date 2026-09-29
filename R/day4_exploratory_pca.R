@@ -205,3 +205,8 @@ cat("Specimens:", length(unique(meta$specimen_id)), "\n")
 cat("Genes retained after CPM filter:", nrow(y), "\n")
 cat("Genes used for visualization:", n_selected, "\n")
 cat("Outputs written to:", out_dir, "\n")
+# Record R and package versions for reproducibility
+writeLines(
+  capture.output(sessionInfo()),
+  file.path(out_dir, "day4_session_info.txt")
+)
