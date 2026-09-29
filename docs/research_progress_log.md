@@ -263,3 +263,39 @@ Repeated gene symbols do not necessarily indicate duplicated count records or er
 ### Status
 
 Day 6 descriptive review and annotation checks completed. Findings remain exploratory and subject to the previously documented specimen-level and clinical metadata limitations.
+
+## Day 7 - Reproducibility and repository quality control
+
+### Objective
+
+Review the repository state, required software dependencies, input data availability, and data-handling practices to establish a reproducibility baseline before further analysis.
+
+### Methods
+
+* Checked Git working-tree status and recent commit history.
+* Inspected the existing R analysis scripts and results directory structure.
+* Verified availability of the required R packages: edgeR, ggplot2, and readxl.
+* Confirmed that the PE count matrix and Day 4 and Day 5 analysis scripts are present.
+* Generated a SHA-256 checksum for the local PE count matrix.
+* Checked that the raw count matrix is ignored by Git and is not tracked.
+* Confirmed that the local Git branch is synchronized with the remote repository.
+
+### Results and validation
+
+* Git branch: master.
+* Local branch synchronized with origin/master.
+* Required R packages are installed.
+* Input count matrix and Day 4 and Day 5 scripts are present.
+* SHA-256 checksum of the local PE count matrix: D580AE4882B716D8A1D188155723A02E61EF2B03081BE610348024F566D7665A.
+* Raw count matrix is excluded by .gitignore and is not tracked by Git.
+* Working tree was clean at the end of the checks.
+
+### Interpretation and limitations
+
+The checks establish local file availability, software package availability, and repository cleanliness. The generated checksum provides a fingerprint for future file-integrity comparisons but does not independently verify identity with the original GEO source file.
+
+The Day 4 and Day 5 analyses were not rerun during these checks, and existing results were not overwritten. No new biological or statistical inference was performed. The established exploratory study scope and data-handling restrictions remain unchanged.
+
+### Status
+
+Day 7 reproducibility and repository quality-control checks completed. No files were modified or committed during the initial checks; this progress-log entry records the completed work.
