@@ -376,3 +376,44 @@ No differential-expression testing, inferential tissue-effect modeling, causal o
 #### Status
 
 The exploratory GO BP over-representation analysis was run and its outputs and metadata were generated. Results were reviewed for mapping counts, term counts, adjusted p-values, and scope limitations. Repository validation and version-control review remain to be completed.
+### Day 9 - Exploratory GO term gene-overlap review
+
+#### Objective
+
+Characterize gene-list overlap among the 306 BH-adjusted-significant GO Biological Process terms from the Day 8 exploratory over-representation analysis.
+
+#### Methods
+
+* Loaded the Day 8 GO BP enrichment results and retained terms with BH-adjusted p-value < 0.05.
+* Parsed the reported gene symbols for each significant term.
+* Calculated pairwise Jaccard similarity between reported gene lists, defined as the number of shared genes divided by the number of genes in the union of the two lists.
+* Compared all unique pairs of significant terms. This is a descriptive gene-list overlap analysis, not a statistical test or a semantic GO ontology similarity analysis.
+
+#### Results
+
+* Significant GO BP terms reviewed: 306.
+* Pairwise comparisons: 46,665.
+* Identical reported gene lists (Jaccard = 1): 123 pairs (0.26%).
+* High gene-list overlap (Jaccard >= 0.5 and < 1): 930 pairs (1.99%).
+* Lower gene-list overlap (Jaccard < 0.5): 45,612 pairs (97.75%).
+* Total pairs with Jaccard >= 0.5: 1,053 (2.26%).
+
+Examples of overlapping annotations included coagulation and hemostasis, synaptic signaling, ion homeostasis, host defense, protein secretion, and metabolic processes. Several related terms had identical reported gene lists.
+
+#### Outputs
+
+* R/day9_go_redundancy.R
+* results/enrichment/day9_go_pairwise_overlap.csv
+* results/enrichment/day9_go_significant_terms.csv
+
+#### Interpretation and limitations
+
+The analysis documents gene-list overlap among significant GO BP annotations. Identical reported gene lists do not establish that GO terms are biologically synonymous; terms can differ in ontology definitions and hierarchical relationships. Jaccard similarity measures overlap among the genes reported in this enrichment output and does not measure semantic similarity between GO terms.
+
+The 306 significant terms should not be treated as 306 independent biological findings. The reviewed themes remain exploratory annotations of highly variable genes across mixed breast, liver, and lung libraries. They cannot be attributed specifically to breast cancer metastasis, a particular tissue, or a causal mechanism.
+
+No differential-expression testing, inferential tissue-effect modeling, causal or clinical biomarker claims, or population-level inference was performed. The established project scope and data-handling restrictions remain unchanged.
+
+#### Status
+
+The Day 9 gene-overlap review was completed. The analysis script and two output tables were generated, and the pairwise comparison counts and leading overlaps were reviewed. Version-control review and commit remain pending.
