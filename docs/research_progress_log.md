@@ -299,3 +299,80 @@ The Day 4 and Day 5 analyses were not rerun during these checks, and existing re
 ### Status
 
 Day 7 reproducibility and repository quality-control checks completed. No files were modified or committed during the initial checks; this progress-log entry records the completed work.
+
+## Day 8 - Enrichment workflow and provenance review
+
+### Objective
+
+Determine whether existing enrichment outputs or an identifiable enrichment workflow are present in the repository before considering any further exploratory analysis.
+
+### Methods
+
+* Inspected the results/enrichment directory recursively for files.
+* Checked the directory for hidden items.
+* Checked whether Git tracks files under results/enrichment.
+* Searched R script filenames for enrichment, pathway, GO, and KEGG-related terms.
+* Listed all R scripts and searched their contents for common enrichment functions and packages, including clusterProfiler, enrichGO, enrichKEGG, gseGO, gseKEGG, fgsea, and ReactomePA.
+
+### Results and validation
+
+* The results/enrichment directory exists but contains no files, including hidden items.
+* No files under results/enrichment are tracked by Git.
+* No R script filenames matched the enrichment-related filename search.
+* No matches for the searched enrichment functions, packages, or terms were found in the R scripts.
+* No enrichment analysis was run and no new analysis outputs were generated.
+
+### Interpretation and limitations
+
+The repository checks did not identify existing enrichment outputs or a readily identifiable enrichment workflow in the R scripts. These filename and text searches do not prove that no enrichment-related code or outputs exist elsewhere in the repository or outside it.
+
+No gene set, enrichment background, statistical test, or multiple-testing adjustment was evaluated. No biological pathway conclusions or biomarker claims can be drawn from this repository review.
+
+The established exploratory study scope and data-handling restrictions remain unchanged.
+
+### Status
+
+Day 8 repository-level enrichment and provenance review completed. No enrichment analysis was performed. This progress-log entry records the checks and their limitations.
+### Day 8 follow-up - Exploratory GO Biological Process enrichment
+
+#### Objective
+
+Characterize functional annotations overrepresented among the 500 most variable genes across the mixed-tissue libraries, using the established expression-filtered gene universe.
+
+#### Methods
+
+* Used the 500 genes selected by descending logCPM variance in the Day 4 exploratory PCA workflow. These genes were selected across all 32 libraries, without tissue-specific or metastasis-specific selection.
+* Used the 26,892 genes retained by the established CPM > 1 in at least two libraries expression filter as the enrichment background.
+* Mapped Ensembl gene IDs to Entrez IDs using org.Hs.eg.db and AnnotationDbi. Ensembl IDs mapping to multiple distinct Entrez IDs were excluded; duplicate Entrez IDs were reduced to unique identifiers.
+* Performed over-representation analysis for Gene Ontology Biological Process terms using clusterProfiler::enrichGO.
+* Used Benjamini-Hochberg adjustment, gene-set size limits of 10 to 500, and unfiltered p-value and q-value cutoffs for result inspection.
+* Recorded package versions and R version in the enrichment metadata output.
+
+#### Results
+
+* Selected genes: 500 Ensembl IDs; 440 unique Entrez IDs after mapping.
+* Background: 26,892 Ensembl IDs; 19,996 unique Entrez IDs after mapping.
+* GO BP terms returned: 3,161.
+* Terms with BH-adjusted p-value < 0.05: 306.
+* The top-ranked annotations included humoral immune response, antimicrobial humoral response, estrogen and steroid metabolic processes, acute-phase response, complement activation, and inflammatory response.
+* The most significant term shown in the reviewed output was humoral immune response (GO:0006959; adjusted p-value approximately 7.83e-14).
+
+#### Outputs
+
+* R/day8_mapping_audit.R
+* R/day8_go_enrichment.R
+* results/enrichment/day8_go_bp_ora.csv
+* results/enrichment/day8_go_bp_ora_metadata.csv
+* results/enrichment/day8_go_bp_session_info.txt
+
+#### Interpretation and limitations
+
+The enrichment is exploratory and describes GO annotations overrepresented among highly variable genes across mixed breast, liver, and lung libraries. The selected genes were not derived from a tissue-specific contrast or a metastasis-versus-primary comparison. Results must not be interpreted as metastasis-associated pathways, causal mechanisms, or validated clinical biomarkers.
+
+GO terms are hierarchically related and overlap in their gene membership; the 306 adjusted-significant terms are not 306 independent biological findings. Enrichment p-values do not resolve tissue composition, tumor content, patient-level dependence, or other potential sources of variation. The expression-filtered background and identifier mapping choices also affect the tested universe and results.
+
+No differential-expression testing, inferential tissue-effect modeling, causal or clinical biomarker claims, or population-level inference was performed. The established project scope and data-handling restrictions remain unchanged.
+
+#### Status
+
+The exploratory GO BP over-representation analysis was run and its outputs and metadata were generated. Results were reviewed for mapping counts, term counts, adjusted p-values, and scope limitations. Repository validation and version-control review remain to be completed.
