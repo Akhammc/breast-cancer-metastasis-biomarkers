@@ -439,3 +439,27 @@ Update the project README to reflect the current exploratory scope, completed an
 ### Status
 
 The README update was committed and pushed to origin/master in commit 62df3bd. The working tree was verified clean after the push.
+
+## Day 11 - Reproducibility review
+
+### Objective
+
+Review the reproducibility and documentation of the existing analysis scripts without changing the approved scientific scope or rerunning analyses.
+
+### Methods
+
+* Reviewed the Day 4, Day 5, Day 8, and Day 9 analysis scripts.
+* Added session-information capture to the Day 4 PCA script.
+* Confirmed that the Day 5 script already records session information and produces descriptive expression summaries.
+* Checked Git tracking and ignore rules for session-information and metadata outputs. Local results remain subject to the existing data-handling restrictions.
+
+### Results
+
+* Day 4 now writes R session and package information to `results/day4/day4_session_info.txt` when the script is next run.
+* Day 5 session-information capture was verified; no changes were needed.
+* The Day 4 script update was committed and pushed in commit `f1e8797`.
+* The working tree was verified clean after the push.
+
+### Limitations
+
+The Day 4 analysis was not rerun during this review. Its new session-information output has therefore not yet been regenerated or verified. No scientific methods, results, or project scope decisions were changed.
