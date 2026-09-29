@@ -416,4 +416,26 @@ No differential-expression testing, inferential tissue-effect modeling, causal o
 
 #### Status
 
-The Day 9 gene-overlap review was completed. The analysis script and two output tables were generated, and the pairwise comparison counts and leading overlaps were reviewed. Version-control review and commit remain pending.
+The Day 9 gene-overlap review was completed. The analysis script and two output tables were generated, and the pairwise comparison counts and leading overlaps were reviewed. The Day 9 analysis was committed and pushed to origin/master in commit 497448f.
+
+## Day 10 - Project documentation update
+
+### Objective
+
+Update the project README to reflect the current exploratory scope, completed analysis workflow, reproducibility documentation, and data-handling restrictions.
+
+### Methods
+
+* Reviewed the approved scope documented in D007 and D008 of the decision log.
+* Updated README.md to describe completed analyses, their scripts, and key project limitations.
+* Documented that generated enrichment CSV outputs remain local and are not tracked in Git.
+* Checked the README diff for whitespace errors.
+
+### Results
+
+* README updated to reflect the current project status and approved scope.
+* No analytical methods, results, or scope decisions were changed.
+
+### Status
+
+The README update was committed and pushed to origin/master in commit 62df3bd. The working tree was verified clean after the push.
