@@ -464,31 +464,133 @@ Review the reproducibility and documentation of the existing analysis scripts wi
 
 The Day 4 analysis was not rerun during this review. Its new session-information output has therefore not yet been regenerated or verified. No scientific methods, results, or project scope decisions were changed.
 
-## Day 4 - Reproducibility rerun verification
+## Day 12 - QC / Reproducibility Audit
 
 ### Objective
 
-Regenerate and verify the Day 4 exploratory PCA outputs after adding R session-information capture to the analysis script.
+Conduct a chronological QC and reproducibility audit of the recorded project work from Day 4 through Day 11, preserving the distinction between historical execution evidence and current reproducibility verification.
 
-### Execution
+### Day 4 audit
 
-* R/day4_exploratory_pca.R was rerun successfully.
+* The Day 4 exploratory PCA and sample-distance workflow was rerun successfully.
 * The analysis processed 32 libraries representing 16 specimens.
 * The CPM filter retained 26,892 genes.
 * The 500 most variable genes were used for PCA and sample-distance visualization.
-* The script regenerated the existing Day 4 descriptive output files.
-* No execution error occurred. The message `calcNormFactors has been renamed to normLibSizes` was emitted during execution.
-
-### Reproducibility verification
-
-* results/day4/day4_session_info.txt was generated successfully.
+* The script regenerated the Day 4 descriptive output files.
+* Current session information was captured successfully.
 * R version: 4.6.1.
 * edgeR version: 4.10.5.
 * limma version: 3.68.5.
 * ggplot2 version: 4.0.3.
 * readxl version: 1.5.0.
-* The regenerated Day 4 output files were present after execution.
+* The Day 4 outputs were present after execution.
+* The message `calcNormFactors has been renamed to normLibSizes` was emitted during execution.
+* The rerun confirmed reproducibility of the recorded Day 4 workflow under the current environment.
 
-### Status
+### Day 5 audit
 
-Day 4 reproducibility rerun: executed and verified. The analysis remains descriptive and exploratory; no differential-expression testing or inferential tissue-effect modeling was performed.
+* The historical Day 5 workflow was reviewed against the surviving analysis script, descriptive output files, and session-information record.
+* The gene-expression summary contains 26,892 retained genes.
+* The library-expression summary contains 32 libraries.
+* The documented distribution summary covers the same 32-library and 26,892-gene analysis space.
+* R version and package information in the Day 5 session-information record were reviewed.
+* No differential-expression testing or inferential tissue-effect modeling was introduced.
+* Day 5 remains a descriptive expression-summary analysis.
+
+### Day 6 audit
+
+* The original Day 6 executable script was not available in the surviving repository history.
+* A reconstructed reproducibility script was created from the documented historical methods and the surviving Day 5 gene-expression summary artifact.
+* The reconstructed workflow reviewed the top 20 genes by variance in log2-CPM and the uniqueness/repetition of gene symbols.
+* The reconstructed run reproduced the recorded findings:
+  * 32 libraries reviewed.
+  * 26,892 genes retained.
+  * 0 missing gene symbols.
+  * 26,717 unique non-empty gene symbols.
+  * 175 repeated gene-symbol occurrences beyond the first occurrence.
+  * Y_RNA was the most frequent symbol, with 21 occurrences.
+  * 0 duplicated symbols occurred among the top 20 variable genes.
+* The reconstructed workflow is explicitly treated as a reconstruction, not as the original historical Day 6 script.
+* The resulting outputs are reproducibility artifacts and are not represented as original historical outputs.
+
+### Day 7 audit
+
+* The historical repository and environment QC activity was reviewed against the current repository state and recorded project history.
+* No separate biological-analysis rerun was applicable to the Day 7 audit.
+* The Day 7 work remains repository/environment QC rather than a new biological analysis.
+
+### Day 8 audit
+
+* The historical Day 8 workflow was corroborated by the surviving enrichment script and output artifacts.
+* The documented exploratory workflow used GO Biological Process enrichment in the mixed-tissue expression context.
+* The historical analysis involved 500 variable genes and the documented background set.
+* The surviving artifacts support the recorded exploratory enrichment findings.
+* The analysis remains exploratory annotation and does not establish metastasis-specific pathways, causal mechanisms, or clinical biomarkers.
+* No inferential tissue-effect model was introduced.
+
+### Day 9 audit
+
+* The historical Day 9 workflow was corroborated by the surviving gene-overlap script and output artifacts.
+* The recorded analysis contained 306 significant GO terms and 46,665 pairwise term comparisons.
+* 123 term pairs had Jaccard similarity equal to 1.
+* 930 term pairs had Jaccard similarity greater than or equal to 0.5 but less than 1.
+* 45,612 term pairs had Jaccard similarity below 0.5.
+* Therefore, 1,053 term pairs had Jaccard similarity greater than or equal to 0.5.
+* The analysis was a descriptive GO-term redundancy/overlap review.
+* No biological or clinical ranking of pathways was introduced.
+
+### Day 10 audit
+
+* The historical Day 10 activity was documentation-focused.
+* The project README was updated to reflect the approved D007/D008 scope and associated limitations.
+* The documented Git commit for this activity was reviewed.
+* No analytical method, biological result, or scientific scope change was introduced by the Day 10 documentation update.
+
+### Day 11 audit
+
+* The historical Day 11 reproducibility review was corroborated from the project record and Git history.
+* Day 4 and Day 5 analysis scripts were reviewed.
+* Day 4 session-information capture was added to the analysis script.
+* Day 5 already contained session-information capture.
+* Git tracking and ignore behavior for analysis outputs were reviewed.
+* The Day 4 session-information addition was committed as documented.
+* The Day 11 progress-log update was committed as documented.
+* The Day 4 session-information output was subsequently regenerated and verified during the Day 12 audit.
+* The Day 11 work remains a reproducibility/documentation review and does not expand the scientific scope.
+
+### Day 12 checkpoint conclusion
+
+#### Overall audit status
+
+The Day 12 chronological QC/reproducibility audit covered the recorded project work from Day 4 through Day 11.
+
+* Day 4: executed and verified by rerunning the exploratory PCA and sample-distance workflow and capturing current session information.
+* Day 5: executed and verified against the surviving script, descriptive outputs, and session-information record.
+* Day 6: reconstructed and independently reproduced from the documented historical methods and surviving Day 5 expression-summary artifact; the reconstructed run reproduced all recorded findings.
+* Day 7: historical repository and environment QC was corroborated against the current repository state; no separate biological-analysis rerun was applicable.
+* Day 8: historical execution was corroborated by the surviving enrichment script and output artifacts, with the exploratory GO BP scope and limitations preserved.
+* Day 9: historical execution was corroborated by the surviving gene-overlap script and output artifacts.
+* Day 10: documentation activity was corroborated by the historical record and recorded Git commit.
+* Day 11: reproducibility-review activity was corroborated, with the Day 4 session-information addition subsequently regenerated and verified during the Day 12 audit.
+
+#### Scientific scope confirmation
+
+The Day 12 audit did not expand the approved scientific scope.
+
+The project remains a descriptive, exploratory feasibility study focused on tissue-associated expression patterns, exploratory annotation, reproducibility, and documented data limitations.
+
+No differential-expression testing, inferential tissue-effect modeling, causal analysis, population-level inference, or clinical biomarker validation was introduced during the Day 12 audit.
+
+The documented limitations concerning patient-level biological units, unresolved library independence, limited matched specimens, tumor-content uncertainty, tissue composition, and incomplete clinical metadata remain applicable.
+
+#### Reproducibility and provenance conclusion
+
+The audit distinguishes historical execution from current reproducibility evidence. Where original executable artifacts were available, they were reviewed or rerun as documented. Where the original executable was unavailable, surviving outputs and historical records were used, and the Day 6 workflow was explicitly reconstructed rather than represented as the original historical script.
+
+Historical outputs and reconstructed reproducibility artifacts were not conflated.
+
+#### Day 12 status
+
+Day 12 QC/reproducibility audit: completed through the Day 11 audit and final checkpoint review.
+
+The project is ready to proceed to the next planned project stage subject to the approved D007 descriptive exploratory scope and the documented feasibility limitations.
