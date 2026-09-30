@@ -21,4 +21,4 @@ Thumbs.db
 # Large or locally generated analysis artifacts
 data/raw/*
 data/processed/*
-results/*
+# Generated analysis results are version-controlled for reproducibility

@@ -1,8 +1,8 @@
 # Day 9: Descriptive GO term redundancy review
 # Uses Day 8 GO BP ORA results; does not rerun enrichment.
 
-input_file <- "results/enrichment/day8_go_bp_ora.csv"
-out_dir <- "results/enrichment"
+input_file <- "results/enrichment/day8/day8_go_bp_ora.csv"
+out_dir <- "results/enrichment/day9"
 
 results <- read.csv(input_file, stringsAsFactors = FALSE)
 

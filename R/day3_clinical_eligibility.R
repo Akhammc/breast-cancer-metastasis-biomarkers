@@ -130,13 +130,13 @@ print(
   n = Inf
 )
 
-dir.create("results/tables", recursive = TRUE, showWarnings = FALSE)
+dir.create("results/day3", recursive = TRUE, showWarnings = FALSE)
 
 write.csv(
   eligibility,
-  "results/tables/day3_specimen_eligibility.csv",
+  "results/day3/day3_specimen_eligibility.csv",
   row.names = FALSE,
   na = ""
 )
 
-cat("\nSaved: results/tables/day3_specimen_eligibility.csv\n")
+cat("\nSaved: results/day3/day3_specimen_eligibility.csv\n")

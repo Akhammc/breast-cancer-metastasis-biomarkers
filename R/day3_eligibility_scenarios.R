@@ -2,7 +2,7 @@ library(readr)
 library(dplyr)
 library(tidyr)
 
-file <- "results/tables/day3_specimen_eligibility.csv"
+file <- "results/day3/day3_specimen_eligibility.csv"
 
 x <- read_csv(file, show_col_types = FALSE)
 

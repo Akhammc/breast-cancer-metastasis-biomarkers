@@ -1,0 +1,17 @@
+"Patient #","Tissue Site","Container ID","Internal Case ID","N_libraries","Library_names","ER Status","PR Status","HER2 Status","Percent Tumor In Biopsy","Tumor_content_category","Breast_tissue_flag","Metastatic_tissue_flag","Percent Necrosis In Biopsy","Treatment prior to collection?","Primary Breast Treatment Before Becoming Metastatic","Metastatic Disease Treatment"
+1,"Breast","39F05L","121197-3",2,"R8BR-1; R8BR-2","Positive","Positive","Unknown","Unknown","Unknown","Eligibility unresolved: tumor content unknown","Not applicable","Unknown","Y","Tamoxifen","Tamoxifen, Aromasin, Doxil, Estradiol, Faslodex, Taxotere+Avastin, Xeloda, Taxol+Avastin, Taxotere+Gemcitabine, Gemcitabine, Xeloda+Avastin, Gemcitabine+Oxaliplatin+Avastin, Abraxane+Carboplatin+Avastin, Methotrexate+Sunitinib, Oxaliplatin+Avastin+Cetuximab, Oxaliplatin+Avastin, Ixempra, Eribulin, Irinotecan+Carboplatin, Arimidex"
+1,"Liver/Bile Duct","39F06L","121196-3",2,"R8LIV-1; R8LIV-2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown",,,
+1,"Lung","39F07L","121195-3",2,"R8LUN-1; R8LUN-2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown",,,
+2,"Breast","1BE09L","160417-2",1,"R39BR-1","Positive","Positive","Positive","No Tumor Seen","No tumor seen","Not eligible: no tumor seen","Not applicable","n/a","Y","Taxotere+H, Herceptin alone, Tamoxifen, Letrozole","Xeloda+Laptinib+BKM120, Navelbine+Afinitor+Herceptin, Taxol+Herceptin+Pertuzumab, AI+Herceptin+Pertuzumab, TDM-1, Aromasin+Herceptin"
+2,"Liver/Bile Duct","1BDB0L","160415-3",2,"R39LIV-1; R39LIV-2",,,,"50%-75%","Documented 50-75%","Not applicable","Tumor content documented; review pathology","25%-50%",,,
+3,"Breast","31906L","180606-3",3,"R49BR_1; R49BR_2; R49BR_3","Positive","Positive","Negative","75%-99%","Documented 75-99%","Tumor documented: 75-99%","Not applicable","1%-25%","Y","n/a","Ixempra+Avastin, Letrozole_Aromasin, Faslodex, Arimidex+Afinitor, Letrozole+Palbociclib, Xeloda, Tamoxifen"
+3,"Liver/Bile Duct","31917L","180609-3",2,"R49LIV_1; R49LIV_2",,,,"75%-99%","Documented 75-99%","Not applicable","Tumor content documented; review pathology","0",,,
+3,"Lung","31966L","180608-3",2,"R49LUN_1; R49LUN_2",,,,"75%-99%","Documented 75-99%","Not applicable","Tumor content documented; review pathology","0",,,
+4,"Liver/Bile Duct","5235L","140513-2",2,"R18LIV_1; R18LIV_2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown",,,
+4,"Lung","5233L","140512-1",2,"R18LUN_1; R18LUN_2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown",,,
+5,"Liver/Bile Duct","DBF0L","150305-3",2,"R23LIV_1; R23LIV_2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown","Y",,
+5,"Lung","DB3BL","150293-3",2,"R23LUN_1; R23LUN_2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown","Y",,
+6,"Liver/Bile Duct","164C1L","150895-2",2,"R33LIV_1; R33LIV_2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown",,,
+6,"Lung","16483L","150888-2",2,"R33LUN_1; R33LUN_2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown",,,
+7,"Liver/Bile Duct","19D4AL","160203-3",2,"R36LIV_1; R36LIV_2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown",,,
+7,"Lung","19D40L","160208-3",2,"R36LUN_1; R36LUN_2",,,,"Unknown","Unknown","Not applicable","Tumor content unknown","Unknown",,,

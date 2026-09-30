@@ -88,5 +88,5 @@ Any expression summary must first undergo a documented review of the analysis ma
 - `docs/data_integrity_audit.md`
 - `docs/decision_log.md`
 - `docs/research_progress_log.md`
-- Patient-level eligibility results: `results/tables/day3_specimen_eligibility.csv`
+- Patient-level eligibility results: `results/day3/day3_specimen_eligibility.csv`
 - Day 3 feasibility scripts under `R/`
