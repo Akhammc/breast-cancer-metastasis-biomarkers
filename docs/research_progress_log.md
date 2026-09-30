@@ -614,3 +614,61 @@ The project is ready to proceed to the next planned project stage subject to the
 Day 13 final analysis specification: completed.
 
 The final analytical specification is now frozen for the remaining project work unless an explicit scope-change decision is documented and approved.
+
+## Day 14 - Final specimen-level descriptive expression consolidation
+
+**Status:** Completed
+
+### Objective
+Implement the frozen Day 13 final analysis specification for specimen-level descriptive expression summarization, using the audited PE count matrix and the established library-level preprocessing workflow.
+
+### Analysis completed
+- Used `data/raw/GSE316391_counts_PE.csv.gz` as the primary expression matrix.
+- Validated 62,703 unique Ensembl gene IDs and 32 RNA-seq libraries.
+- Applied the established exploratory preprocessing:
+  - CPM >1 in at least 2 libraries.
+  - TMM library-size normalization.
+  - logCPM transformation with prior count = 2.
+- Retained 26,892 genes after expression filtering.
+- Preserved the audited library-to-specimen mapping from the RNA-seq metadata.
+- Aggregated normalized logCPM values to the frozen specimen level by taking the arithmetic mean across libraries belonging to each specimen.
+- Produced 16 unique patient-tissue specimens from 32 libraries and 7 patients.
+- Library representation per specimen was verified as:
+  - 1 specimen with 1 library.
+  - 14 specimens with 2 libraries.
+  - 1 specimen with 3 libraries.
+  - Total = 32 libraries.
+- Generated:
+  - `results/day14/day14_specimen_mean_logCPM.csv`
+  - `results/day14/day14_specimen_metadata.csv`
+  - `results/day14/day14_specimen_expression_summary.csv`
+  - `results/day14/day14_session_info.txt`
+
+### Validation
+- Specimen expression matrix: 26,892 genes × 16 specimens.
+- Gene IDs: 26,892 unique identifiers.
+- Specimen IDs: 16 unique identifiers with no duplicates.
+- Tissue sites represented: Breast, Liver/Bile Duct, and Lung.
+- Patient count: 7.
+- No missing or non-finite specimen expression values.
+- Specimen summary statistics contained 26,892 unique genes with no missing or non-finite values.
+- Aggregation was independently checked for:
+  - a 2-library specimen (Patient 4 liver), where the reported value matched the arithmetic mean of its two library-level logCPM values.
+  - a 3-library specimen (Patient 3 breast), where the reported value matched the arithmetic mean of its three library-level logCPM values.
+- Patient 2 breast remained represented in the descriptive matrix and retained its metadata annotation indicating no tumor seen; it was not silently excluded.
+
+### Reproducibility
+Day 14 session information was captured successfully:
+- R 4.6.1
+- Windows 11 x64
+- edgeR 4.10.5
+- limma 3.68.5
+- readxl 1.5.0
+
+A non-blocking deprecation warning was observed when assigning row names to a tibble-derived object during metadata preparation. The analytical outputs and validation checks were unaffected.
+
+### Scope
+Day 14 remains strictly descriptive/exploratory under D007/D008. No differential-expression testing, inferential tissue comparison, causal inference, population-level inference, treatment-effect analysis, or clinical biomarker validation was performed.
+
+### Day 14 conclusion
+The frozen specimen-level descriptive aggregation has been implemented and independently validated. The resulting 16-specimen expression matrix and associated metadata/statistical summaries are structurally and numerically consistent with the approved analysis specification.
