@@ -463,3 +463,32 @@ Review the reproducibility and documentation of the existing analysis scripts wi
 ### Limitations
 
 The Day 4 analysis was not rerun during this review. Its new session-information output has therefore not yet been regenerated or verified. No scientific methods, results, or project scope decisions were changed.
+
+## Day 4 - Reproducibility rerun verification
+
+### Objective
+
+Regenerate and verify the Day 4 exploratory PCA outputs after adding R session-information capture to the analysis script.
+
+### Execution
+
+* R/day4_exploratory_pca.R was rerun successfully.
+* The analysis processed 32 libraries representing 16 specimens.
+* The CPM filter retained 26,892 genes.
+* The 500 most variable genes were used for PCA and sample-distance visualization.
+* The script regenerated the existing Day 4 descriptive output files.
+* No execution error occurred. The message `calcNormFactors has been renamed to normLibSizes` was emitted during execution.
+
+### Reproducibility verification
+
+* results/day4/day4_session_info.txt was generated successfully.
+* R version: 4.6.1.
+* edgeR version: 4.10.5.
+* limma version: 3.68.5.
+* ggplot2 version: 4.0.3.
+* readxl version: 1.5.0.
+* The regenerated Day 4 output files were present after execution.
+
+### Status
+
+Day 4 reproducibility rerun: executed and verified. The analysis remains descriptive and exploratory; no differential-expression testing or inferential tissue-effect modeling was performed.
