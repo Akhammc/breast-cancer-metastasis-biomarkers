@@ -594,3 +594,23 @@ Historical outputs and reconstructed reproducibility artifacts were not conflate
 Day 12 QC/reproducibility audit: completed through the Day 11 audit and final checkpoint review.
 
 The project is ready to proceed to the next planned project stage subject to the approved D007 descriptive exploratory scope and the documented feasibility limitations.
+
+### Day 13 - Final analysis specification
+
+* The final analysis specification was created as `docs/final_analysis_specification.md`.
+* The specification was reviewed against the approved D007/D008 scope, the Day 12 QC/reproducibility audit, and the documented patient/specimen/library structure.
+* The scientific scope was frozen as descriptive and exploratory, with differential-expression testing, inferential tissue-effect modeling, causal inference, population-level inference, and clinical biomarker validation explicitly excluded.
+* The PE count matrix `data/raw/GSE316391_counts_PE.csv.gz` was documented as the provisional final analysis source.
+* The 32-library, 16-specimen, 7-patient hierarchy was explicitly documented, with libraries retained for QC/exploratory visualization and specimens used as the primary unit for final descriptive expression aggregation.
+* Repeated libraries within a specimen were explicitly defined to be summarized using the arithmetic mean of normalized logCPM values for each gene after library-level TMM normalization and logCPM transformation.
+* The original library-level values remain available for QC, PCA, sample-distance visualization, and provenance.
+* The established exploratory workflow, including CPM > 1 in at least 2 libraries, TMM normalization, logCPM transformation with prior count 2, and the 500 most variable retained genes for PCA/sample-distance visualization, was documented as the final workflow.
+* The existing exploratory GO Biological Process annotation and GO-term redundancy review were retained within the descriptive exploratory scope.
+* Interpretation constraints, clinical/biological metadata limitations, and reproducibility/provenance requirements were explicitly documented.
+* The final analysis specification was committed to Git as commit `83d0ef4` with message `Freeze Day 13 final analysis specification`.
+
+### Day 13 status
+
+Day 13 final analysis specification: completed.
+
+The final analytical specification is now frozen for the remaining project work unless an explicit scope-change decision is documented and approved.
