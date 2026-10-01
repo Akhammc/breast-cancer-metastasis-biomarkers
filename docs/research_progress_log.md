@@ -796,3 +796,68 @@ The figures do not establish tissue effects, metastatic mechanisms, causality, o
 
 ### Status
 Day 16 final expression figures completed. Figures 1-4 were generated from the finalized specimen-level expression dataset, and the Figure 3 distance matrix was structurally and numerically validated.
+
+## Day 17 — Final Biological Interpretation
+
+### Objective
+Provide the final biological interpretation of the completed descriptive exploratory RNA-seq analysis while maintaining the approved D007/D008 scope.
+
+### Interpretation Performed
+- Interpreted the expression distributions, specimen-level PCA, specimen distance structure, and variable-gene heatmap as complementary descriptions of expression heterogeneity across the 16 audited patient-tissue specimens.
+- Interpreted the observed expression structure as tissue-associated and patient-associated descriptive variation rather than as evidence of a specific metastasis effect.
+- Considered patient identity explicitly because the 16 specimens originate from 7 patients.
+- Considered the relationship between the 32 recorded RNA-seq libraries and the 16 patient-tissue specimens.
+- Preserved the unresolved status of repeated-library biological independence.
+- Considered the limited number of matched tissue specimens available for patient-aware interpretation.
+- Considered uncertainty in tumor content and the potential contribution of non-malignant tissue to bulk RNA-seq expression.
+- Considered tissue composition, cellularity, stromal and immune contributions, necrosis, and other specimen characteristics as possible contributors to observed expression heterogeneity.
+- Considered incomplete clinical metadata, including incomplete receptor-status and treatment information.
+
+### Supported Descriptive Interpretation
+The completed analysis supports the conclusion that the audited specimens exhibit heterogeneous gene-expression profiles across patients and tissue sites.
+
+The final figures characterize this heterogeneity at the specimen level but do not statistically attribute the observed variation to metastasis, tissue identity, treatment, or another specific biological factor.
+
+Highly variable genes and observed expression patterns may provide exploratory candidate signals for subsequent investigation, but variability alone does not establish relevance to metastasis or biomarker validity.
+
+### Hypotheses for Future Investigation
+The descriptive patterns may motivate investigation of:
+- tissue-associated expression patterns in larger and better-controlled cohorts;
+- highly variable genes as potential candidate markers in independent datasets;
+- patient-specific contributions to expression variation;
+- the contribution of tumor content and tissue composition to observed expression patterns.
+
+These are hypotheses for future investigation and were not established by inferential testing in the present analysis.
+
+### Interpretation Limitations
+- The 32 RNA-seq libraries cannot be assumed to represent 32 independent biological observations.
+- Repeated-library biological independence remains unresolved from the available public metadata.
+- The 16 specimens represent only 7 patients, creating patient-level dependence.
+- Matched tissue availability is limited.
+- Tumor content is uncertain for multiple specimens, while the Patient 2 breast specimen is explicitly annotated as no tumor seen.
+- Bulk RNA-seq expression may reflect differences in tissue composition and cellularity in addition to malignant-cell expression.
+- Clinical metadata are incomplete for variables relevant to biological and clinical interpretation.
+
+### Conclusions Not Supported
+The current analysis does not establish:
+- metastasis-specific gene-expression effects;
+- causal mechanisms of metastatic progression;
+- genes or gene sets that drive metastasis;
+- tumor-cell-specific metastatic programs;
+- population-level generalization;
+- treatment effects;
+- predictive, diagnostic, prognostic, or therapeutic clinical utility;
+- or clinically validated biomarkers.
+
+### Scope
+The interpretation remains strictly descriptive and exploratory under D007/D008.
+
+No differential-expression testing, inferential tissue comparison, causal inference, population-level inference, treatment-effect analysis, or clinical biomarker validation was performed.
+
+Any future analysis intended to make these inferential or clinical claims would require an explicitly documented scope change and appropriate methodological and biological validation.
+
+### Output
+- `docs/final_biological_interpretation.md`
+
+### Status
+Day 17 final biological interpretation completed. The interpretation distinguishes supported descriptive observations from hypotheses and explicitly documents the patient-level, replicate, matched-specimen, tumor-content, tissue-composition, and clinical-metadata limitations.
