@@ -1,0 +1,17 @@
+"specimen_id","Patient #","Tissue Site","Container ID","Internal Case ID","Histology","n_libraries"
+"1|Breast|39F05L|121197-3",1,"Breast","39F05L","121197-3","Invasive ductal carcinoma",2
+"1|Liver/Bile Duct|39F06L|121196-3",1,"Liver/Bile Duct","39F06L","121196-3","Invasive ductal carcinoma",2
+"1|Lung|39F07L|121195-3",1,"Lung","39F07L","121195-3","Invasive ductal carcinoma",2
+"2|Breast|1BE09L|160417-2",2,"Breast","1BE09L","160417-2","Invasive ductal carcinoma (NO MALIGNANCY DIAGNOSED / NO TUMOR SEEN)",1
+"2|Liver/Bile Duct|1BDB0L|160415-3",2,"Liver/Bile Duct","1BDB0L","160415-3","Invasive ductal carcinoma",2
+"3|Breast|31906L|180606-3",3,"Breast","31906L","180606-3","Invasive ductal carcinoma",3
+"3|Liver/Bile Duct|31917L|180609-3",3,"Liver/Bile Duct","31917L","180609-3","Invasive ductal carcinoma",2
+"3|Lung|31966L|180608-3",3,"Lung","31966L","180608-3","Invasive ductal carcinoma",2
+"4|Liver/Bile Duct|5235L|140513-2",4,"Liver/Bile Duct","5235L","140513-2","Invasive ductal carcinoma",2
+"4|Lung|5233L|140512-1",4,"Lung","5233L","140512-1","Invasive ductal carcinoma",2
+"5|Liver/Bile Duct|DBF0L|150305-3",5,"Liver/Bile Duct","DBF0L","150305-3","Invasive ductal carcinoma",2
+"5|Lung|DB3BL|150293-3",5,"Lung","DB3BL","150293-3","Invasive ductal carcinoma",2
+"6|Liver/Bile Duct|164C1L|150895-2",6,"Liver/Bile Duct","164C1L","150895-2","Invasive ductal carcinoma",2
+"6|Lung|16483L|150888-2",6,"Lung","16483L","150888-2","Invasive ductal carcinoma",2
+"7|Liver/Bile Duct|19D4AL|160203-3",7,"Liver/Bile Duct","19D4AL","160203-3","Invasive ductal carcinoma",2
+"7|Lung|19D40L|160208-3",7,"Lung","19D40L","160208-3","Invasive ductal carcinoma",2

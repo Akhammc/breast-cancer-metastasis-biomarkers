@@ -1,4 +1,4 @@
-# Final Analysis Specification
+﻿# Final Analysis Specification
 
 ## 1. Purpose
 
@@ -279,3 +279,14 @@ A proposed scope change must be documented separately with:
 - methodological consequences.
 
 The user must explicitly approve the change before execution.
+
+## 18. Day 16 - Final Expression Figures
+- Input: results/day14/day14_specimen_mean_logCPM.csv
+- Unit: 16 specimens
+- Variability metric: gene-wise variance of normalized logCPM across the 16 specimens
+- Selection: top 500 genes by variance
+- Visualization: specimen-level expression heatmap
+- Annotation: patient and tissue site
+- No inferential statistics
+- No tissue comparison testing
+- No DE-derived gene selection

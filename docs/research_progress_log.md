@@ -724,3 +724,75 @@ No differential-expression analysis, inferential tissue-effect testing, causal i
 
 ### Status
 Day 15 patient/specimen-aware descriptive analysis completed and validated. Outputs are ready for documentation and version control.
+
+## Day 16 - Final Expression Figures
+
+### Objective
+Generate the four finalized expression figures from the approved specimen-level expression dataset while preserving patient/specimen identity and the descriptive exploratory scope defined in D007/D008.
+
+### Final Figure Specification
+- Figure 1 - Expression distributions: normalized logCPM distributions across the 16 specimens; biological unit = specimen.
+- Figure 2 - PCA: established exploratory expression structure using specimen-level expression profiles with patient and tissue-site annotation; biological unit = specimen.
+- Figure 3 - Specimen distance heatmap: pairwise expression similarity across the 16 specimens; biological unit = specimen.
+- Figure 4 - Variable-gene heatmap: expression patterns of the top 500 most variable genes across the 16 specimens; biological unit = specimen.
+
+### Analysis Performed
+- Used the finalized Day 14 specimen-level mean normalized logCPM matrix.
+- Finalized matrix contained 26,892 genes across 16 specimens.
+- Figure 1 visualized specimen-level normalized logCPM distributions.
+- Figure 2 performed specimen-level PCA using the top 500 genes selected by gene-wise variance across the 16 specimens, with centered and unscaled PCA.
+- Figure 3 calculated Euclidean distances between the 16 specimen-level expression profiles using all 26,892 genes.
+- Figure 4 selected the top 500 genes by variance across the 16 specimens and displayed their specimen-level expression patterns as a heatmap.
+- Figure 4 used within-gene Z-score transformation for visualization only; gene selection remained based on variance of the normalized logCPM matrix.
+- Patient and tissue-site annotations were retained for the specimen-level figures.
+
+### Figure 2 Validation
+- Specimens represented: 16
+- Unique specimen IDs: 16
+- Duplicate specimen IDs: 0
+- Variable genes: 500
+- PC1 variance explained: 29.978%
+- PC2 variance explained: 20.365%
+
+### Figure 3 Validation
+- Distance matrix dimensions: 16 - 16
+- Unique row specimen IDs: 16
+- Unique column specimen IDs: 16
+- Missing values: 0
+- Non-finite values: 0
+- Maximum asymmetry: 0
+- Maximum absolute diagonal value: 0
+
+### Outputs
+#### Figure 1
+- `results/day16/figure1/day16_figure1_distribution_data.csv`
+- `results/day16/figure1/day16_figure1_specimen_expression_distributions.png`
+- `results/day16/figure1/day16_session_info.txt`
+
+#### Figure 2
+- `results/day16/figure2/day16_figure2_pca_coordinates.csv`
+- `results/day16/figure2/day16_figure2_pca_variance.csv`
+- `results/day16/figure2/day16_figure2_session_info.txt`
+- `results/day16/figure2/day16_figure2_specimen_pca.png`
+- `results/day16/figure2/day16_figure2_top500_variable_genes.csv`
+
+#### Figure 3
+- `results/day16/figure3/day16_figure3_session_info.txt`
+- `results/day16/figure3/day16_figure3_specimen_annotation.csv`
+- `results/day16/figure3/day16_figure3_specimen_distance_heatmap.png`
+- `results/day16/figure3/day16_figure3_specimen_distance_matrix.csv`
+
+#### Figure 4
+- `results/day16/figure4/day16_figure4_heatmap_matrix.csv`
+- `results/day16/figure4/day16_figure4_session_info.txt`
+- `results/day16/figure4/day16_figure4_specimen_annotation.csv`
+- `results/day16/figure4/day16_figure4_top500_variable_genes.csv`
+- `results/day16/figure4/day16_figure4_variable_gene_heatmap.png`
+
+### Scope and Interpretation
+All four figures are descriptive/exploratory representations of the audited dataset. No differential-expression testing, tissue comparison testing, inferential statistics, causal inference, population-level inference, treatment-effect analysis, or clinical biomarker validation was performed.
+
+The figures do not establish tissue effects, metastatic mechanisms, causality, or validated clinical biomarkers.
+
+### Status
+Day 16 final expression figures completed. Figures 1-4 were generated from the finalized specimen-level expression dataset, and the Figure 3 distance matrix was structurally and numerically validated.
