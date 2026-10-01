@@ -1,0 +1,8 @@
+"Patient","n_specimens","n_tissue_sites","tissue_sites","total_libraries"
+1,3,3,"Breast; Liver/Bile Duct; Lung",6
+2,2,2,"Breast; Liver/Bile Duct",3
+3,3,3,"Breast; Liver/Bile Duct; Lung",7
+4,2,2,"Liver/Bile Duct; Lung",4
+5,2,2,"Liver/Bile Duct; Lung",4
+6,2,2,"Liver/Bile Duct; Lung",4
+7,2,2,"Liver/Bile Duct; Lung",4

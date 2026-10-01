@@ -672,3 +672,55 @@ Day 14 remains strictly descriptive/exploratory under D007/D008. No differential
 
 ### Day 14 conclusion
 The frozen specimen-level descriptive aggregation has been implemented and independently validated. The resulting 16-specimen expression matrix and associated metadata/statistical summaries are structurally and numerically consistent with the approved analysis specification.
+
+## Day 15 — Patient/Specimen-Aware Descriptive Analysis
+
+### Objective
+Extend the finalized Day 14 specimen-level expression dataset into a patient/specimen-aware descriptive analysis while preserving the established biological-unit hierarchy and avoiding inferential tissue comparisons.
+
+### Inputs
+- `results/day14/day14_specimen_mean_logCPM.csv`
+- `results/day14/day14_specimen_metadata.csv`
+- Finalized Day 14 expression matrix: 26,892 genes × 16 specimens.
+- Sample structure: 32 RNA-seq libraries mapped to 16 patient-tissue specimens from 7 patients.
+
+### Analysis Performed
+- Validated the Day 14 specimen-level expression matrix and metadata before analysis.
+- Preserved specimen identity using the established `specimen_id`.
+- Summarized patient-level specimen structure, including the number of specimens, tissue sites, and libraries represented for each patient.
+- Documented tissue availability and matched-tissue structure for Breast, Liver/Bile Duct, and Lung.
+- Generated descriptive expression summaries for each specimen across the 26,892 retained genes.
+- Expression summaries included mean, median, standard deviation, variance, minimum, and maximum normalized logCPM.
+- Retained patient, tissue-site, specimen, library-count, and histology metadata with the expression summaries.
+
+### Patient/Specimen Structure
+- Patients: 7
+- Patient-tissue specimens: 16
+- RNA-seq libraries: 32
+- Breast–Liver/Bile Duct matched patients: 3
+- Breast–Lung matched patients: 2
+- Liver/Bile Duct–Lung matched patients: 6
+- Libraries remained associated with their specimen and were not treated as independent biological observations.
+
+### Validation
+- Specimen expression summary rows: 16
+- Duplicate specimen IDs: 0
+- Missing `mean_logCPM` values: 0
+- Missing `variance_logCPM` values: 0
+- Unique patients represented: 7
+- Genes represented per specimen: 26,892
+- Day 14 specimen IDs and Day 15 expression specimen IDs were validated as the same set.
+
+### Outputs
+- `results/day15/day15_patient_specimen_structure.csv`
+- `results/day15/day15_matched_tissue_summary.csv`
+- `results/day15/day15_specimen_expression_summary.csv`
+- `results/day15/day15_session_info.txt`
+
+### Interpretation and Scope
+This analysis is descriptive and exploratory. Specimen-level expression summaries are intended to characterize the audited dataset while preserving patient/specimen structure. They do not constitute differential-expression testing or an inferential comparison of tissue types.
+
+No differential-expression analysis, inferential tissue-effect testing, causal inference, population-level inference, treatment-effect analysis, or clinical biomarker validation was performed.
+
+### Status
+Day 15 patient/specimen-aware descriptive analysis completed and validated. Outputs are ready for documentation and version control.
