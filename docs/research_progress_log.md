@@ -861,3 +861,40 @@ Any future analysis intended to make these inferential or clinical claims would 
 
 ### Status
 Day 17 final biological interpretation completed. The interpretation distinguishes supported descriptive observations from hypotheses and explicitly documents the patient-level, replicate, matched-specimen, tumor-content, tissue-composition, and clinical-metadata limitations.
+
+## Day 18 — Final Reproducibility Package
+
+### Objective
+Create the final reproducibility documentation package covering the software environment, analysis scripts, inputs, outputs, Git provenance, traceability, raw-data protection, and remaining reproducibility gaps.
+
+### Reproducibility Work Performed
+- Created `docs/reproducibility_summary.md`.
+- Documented the R 4.6.1 analysis environment and relevant package versions recorded in the project session-information files.
+- Documented the primary raw inputs:
+  - `data/raw/GSE316391_counts_PE.csv.gz`
+  - `data/raw/GSE316391_BCMetastasis_All_Samples_and_Clinical_Data.xlsx`
+- Documented the analysis scripts used across feasibility, exploratory analysis, final specimen-level processing, and final expression figures.
+- Documented the traceability chain from raw inputs through the Day 14 specimen-level expression matrix, Day 15 patient/specimen analysis, Day 16 final expression figures, and Day 17 biological interpretation.
+- Documented the Git checkpoints through commit `90c75d0` at the start of Day 18.
+- Verified that `data/raw/` is protected from Git tracking by `.gitignore`.
+- Confirmed that generated `results/` are intentionally version-controlled for reproducibility.
+- Documented remaining reproducibility gaps, including the reconstructed Day 6 analysis, incomplete historical reruns, unresolved repeated-library independence, absence of a formal environment lockfile/container, and lack of a single automated end-to-end workflow.
+
+### Final Reproducibility Chain
+`raw count matrix + metadata workbook`
+→ `Day 14 specimen-level expression processing`
+→ `Day 14 finalized specimen matrix`
+→ `Day 15 patient/specimen analysis`
+→ `Day 16 final expression figures`
+→ `Day 17 biological interpretation`
+
+### Scope
+The reproducibility documentation remains aligned with the approved D007/D008 descriptive exploratory scope.
+
+No differential-expression testing, inferential tissue comparison, causal inference, population-level inference, or clinical biomarker validation was introduced.
+
+### Output
+- `docs/reproducibility_summary.md`
+
+### Status
+Day 18 reproducibility package completed. The reproducibility summary documents the analysis environment, scripts, inputs, outputs, Git provenance, traceability, raw-data protection, and remaining reproducibility gaps.
